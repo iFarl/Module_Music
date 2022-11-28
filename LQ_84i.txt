@@ -1,0 +1,29 @@
+import random
+a = 'The Only Thing I Know For Real','The Stains of Time','It Has To Be This Way','The Only Thing They Fear Is You','M O O N - Hydrogen','Blizzard - Light Club','Divide - Magna','Rules of Nature','Red Sun','Collective Consciousness'
+b = 'Mr. Kitty - After dark', 'Stuck in the Sound - Lets Go', 'Berserk soundtrack - 1 Behelit', 'BERSERK Forces by Susumu Hirasawa', 'The Drums - Money', 'Molchat Doma - Volny', 'Molchat Doma - Sudno', 'Molchat Doma - Toska', 'Molchat Doma - Filmy', 'Molchat Doma - Prognoz', 'Hisohkah - School Rooftop (Intro)'
+c = 'miscél - When You Left', 'Jay-Lounge & Jordy Chandra - Puddles', 'hoogway - soulful eyes', 'Jordy Chandra - Reminiscing Night', 'WYS - Have A Beer', 'lofty - locked away (ft. imfinenow)', 'Jordy Chandra - Talking to You On a Rain Day', 'biosphere - when in rome', 'Nohone - Nothing But A Dream', 'BeyondChivalry - r e l a x i n g', 'bace - the train (where i met you)'
+d = 'Rock You Like A Hurricane - Scopions', 'Paranoid - Black Sabbath', 'Fortunate Son - Creedence Clearwater Revival', 'AC/DC - Back In Black','Deep Purple - Smoke on the Water', 'AC/DC - Highway to Hell', 'Guns N Roses - Welcome To The Jungle', 'Guns N Roses - Paradise City', 'Daft Punk - Robot Rock','Mick Gordon - 11. BFG Division'
+e = 'M O O N - Crystals', ' Scattle - Flatline', 'Scattle - Inner Animal', 'Scattle - Its Safe Now','Voyager (Jasper Byrne)','Dust (M|O|O|N)', 'In The Face Of Evil (Magic Sword)','Starforce - Spacebridge','Cosmic Sand - 9h00-1' ' Lost Years - Lightbringers', 'SelloRekT - Camaro Fever', 'Sferro - Blitz'
+print('Приветствую! Добро пожаловать в модуль LQ-84i :)')
+music = input('Музыка под настроение, жанрам(off - прекратить взаимодействие)')
+while music != 'off':
+    music = music.lower()
+    if 'хорошо' in music:
+        print('Поздравляю с хорошим настроением! Так держать!')
+        print(random.sample(a, 3))
+        music = input('Быть может тебе самому хочется выбрать подходящий для себя жанр?(рок,lo-fi,ретровейв?)(off - прекратить взаимодействие)')
+        while music != 'off':
+            music = music.lower()
+            if music == 'рок':
+                music = music.lower()
+                print(random.sample(d, 3))
+                break
+            if music == 'ретровейв':
+                music = music.lower()
+                print(random.sample(e, 3))
+                break
+    if 'грустно' in music:
+        print(random.sample(b, 3))
+    if 'отдых' in music:
+        print(random.sample(c, 3))
+    music = input('Музыка под настроение(off - прекратить взаимодействие)')
